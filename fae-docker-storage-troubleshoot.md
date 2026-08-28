@@ -53,7 +53,7 @@ UGOS 存储管理界面显示存储空间2（/volume2）空间使用情况如下
 
 ### 图 1：du 扫描 /volume2 + UGOS 空间使用情况 — 发现矛盾
 
-![图1：左侧 du 命令扫描 /volume2 目录输出，右侧 UGOS 空间使用情况弹窗显示其他 2.87TB](assets/case-01-du-ugos.png)
+![图1：左侧 du 命令扫描 /volume2 目录输出，右侧 UGOS 空间使用情况弹窗显示其他 2.87TB](https://raw.githubusercontent.com/xushir/fae-docker-storage-troubleshoot/main/assets/case-01-du-ugos.png)
 
 **图 1**：左侧 SSH 终端在 `/volume2#` 执行 `du -sh .[!.]* *`，扫描 /volume2 下所有目录大小。右侧 UGOS 弹窗显示"空间使用情况"。
 
@@ -91,7 +91,7 @@ UGOS 存储管理界面显示存储空间2（/volume2）空间使用情况如下
 
 ### 图 2：docker ps -as — 定位元凶容器
 
-![图2：终端 docker ps -as 命令输出，transmission 容器 2.56TB 被红框标注](assets/case-02-docker-ps.png)
+![图2：终端 docker ps -as 命令输出，transmission 容器 2.56TB 被红框标注](https://raw.githubusercontent.com/xushir/fae-docker-storage-troubleshoot/main/assets/case-02-docker-ps.png)
 
 **图 2**：SSH 终端在 `/volume2/@docker#` 执行 `docker ps -as`，列出所有容器（含已停止）及可写层大小。红框标注 transmission 容器 SIZE = **2.56TB**。
 
